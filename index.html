@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberShield — Case Studies & Prevention Models</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <span class="shield">⬡</span> CyberShield
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#cases">Case Studies</a></li>
+    <li><a href="#prevention">Prevention</a></li>
+    <li><a href="#matrix">Threat Matrix</a></li>
+    <li><a href="#quiz">Quiz</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <a class="nav-cta" href="#prevention">Get Protected</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span> Live Threat Intelligence</div>
+    <h1>
+      <span class="highlight">Cybersecurity</span><br>
+      Case Studies &<br>
+      <span class="highlight-red">Prevention Models</span>
+    </h1>
+    <p class="hero-sub">
+      Deep-dive into real-world breaches, understand attack vectors, and implement proven defense frameworks used by Fortune 500 security teams.
+    </p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#cases">Explore Cases</a>
+      <a class="btn-secondary" href="#prevention">Prevention Framework</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Case Studies</span></div>
+      <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Attack Coverage</span></div>
+      <div class="stat"><span class="stat-num">5-Layer</span><span class="stat-label">Defense Model</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-inner" id="ticker">
+    <span class="ticker-item"><span class="tag">[CRITICAL]</span> Ransomware via unpatched VPN — 2024 Q4</span>
+    <span class="ticker-item"><span class="tag">[HIGH]</span> Supply chain attack — npm package poisoning</span>
+    <span class="ticker-item"><span class="tag">[CRITICAL]</span> Zero-day in enterprise firewall firmware</span>
+    <span class="ticker-item"><span class="tag">[HIGH]</span> Phishing campaign targeting finance sector</span>
+    <span class="ticker-item"><span class="tag">[MEDIUM]</span> Credential stuffing via leaked database</span>
+    <span class="ticker-item"><span class="tag">[CRITICAL]</span> APT targeting healthcare infrastructure</span>
+    <span class="ticker-item"><span class="tag">[HIGH]</span> Man-in-the-middle via rogue WiFi hotspot</span>
+    <span class="ticker-item"><span class="tag">[MEDIUM]</span> Insider threat — privileged account misuse</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item"><span class="tag">[CRITICAL]</span> Ransomware via unpatched VPN — 2024 Q4</span>
+    <span class="ticker-item"><span class="tag">[HIGH]</span> Supply chain attack — npm package poisoning</span>
+    <span class="ticker-item"><span class="tag">[CRITICAL]</span> Zero-day in enterprise firewall firmware</span>
+    <span class="ticker-item"><span class="tag">[HIGH]</span> Phishing campaign targeting finance sector</span>
+    <span class="ticker-item"><span class="tag">[MEDIUM]</span> Credential stuffing via leaked database</span>
+    <span class="ticker-item"><span class="tag">[CRITICAL]</span> APT targeting healthcare infrastructure</span>
+    <span class="ticker-item"><span class="tag">[HIGH]</span> Man-in-the-middle via rogue WiFi hotspot</span>
+    <span class="ticker-item"><span class="tag">[MEDIUM]</span> Insider threat — privileged account misuse</span>
+  </div>
+</div>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <p class="section-label reveal">// case studies</p>
+  <h2 class="reveal">Real-World <br>Breach Analysis</h2>
+  <p class="section-sub reveal">Each case is dissected: entry point, lateral movement, impact, and post-incident lessons.</p>
+
+  <div class="cases-grid">
+
+    <div class="case-card critical reveal" onclick="toggleCase(this)">
+      <div style="position:absolute;top:1rem;right:1rem;"><span class="severity sev-critical">Critical</span></div>
+      <div class="case-icon">🏥</div>
+      <div class="case-title">MedCore Ransomware Attack</div>
+      <div class="case-org">// Healthcare Network — 2023</div>
+      <p class="case-desc">LockBit 3.0 ransomware deployed via unpatched Citrix ADC. Encrypted 14TB of patient records across 47 hospitals.</p>
+      <div class="case-meta">
+        <div class="meta-item">Vector: <span>CVE-2023-3519</span></div>
+        <div class="meta-item">Dwell: <span>22 days</span></div>
+        <div class="meta-item">Loss: <span>$89M</span></div>
+      </div>
+      <div class="case-expand">
+        <h4>Attack Chain</h4>
+        <ul class="impact-list">
+          <li>Initial access via Citrix gateway zero-day (CVE-2023-3519)</li>
+          <li>Lateral movement using stolen service account credentials</li>
+          <li>Disabled endpoint protection on 2,400 nodes over 3 weeks</li>
+          <li>Exfiltrated 2.1M patient records before encryption</li>
+          <li>Demanded $15M ransom — partially paid after 9-day downtime</li>
+        </ul>
+        <h4 style="margin-top:1rem;">Prevention Gaps</h4>
+        <ul class="impact-list">
+          <li>Patch management SLA exceeded 90 days for critical CVEs</li>
+          <li>No network segmentation between clinical and admin systems</li>
+          <li>MFA not enforced on gateway authentication</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-card reveal" onclick="toggleCase(this)">
+      <div style="position:absolute;top:1rem;right:1rem;"><span class="severity sev-high">High</span></div>
+      <div class="case-icon">🏦</div>
+      <div class="case-title">BankTrust Supply Chain Compromise</div>
+      <div class="case-org">// Financial Services — 2024</div>
+      <p class="case-desc">Malicious update pushed through trusted software vendor. 8,000+ endpoints backdoored via SolarWinds-style attack pattern.</p>
+      <div class="case-meta">
+        <div class="meta-item">Vector: <span>Supply Chain</span></div>
+        <div class="meta-item">Dwell: <span>61 days</span></div>
+        <div class="meta-item">Loss: <span>$34M</span></div>
+      </div>
+      <div class="case-expand">
+        <h4>Attack Chain</h4>
+        <ul class="impact-list">
+          <li>Attacker compromised vendor's CI/CD pipeline via stolen SSH key</li>
+          <li>Inserted beacon malware into legitimate software update v4.2.1</li>
+          <li>Auto-deployed to all enterprise clients during scheduled update window</li>
+          <li>Established persistent C2 communication over HTTPS to legit CDN</li>
+          <li>Exfiltrated SWIFT transaction logs and customer PII over 2 months</li>
+        </ul>
+        <h4 style="margin-top:1rem;">Prevention Gaps</h4>
+        <ul class="impact-list">
+          <li>Software Bill of Materials (SBOM) not maintained or verified</li>
+          <li>No code signing verification for software updates</li>
+          <li>EDR rules didn't flag abnormal outbound HTTPS patterns</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-card critical reveal" onclick="toggleCase(this)">
+      <div style="position:absolute;top:1rem;right:1rem;"><span class="severity sev-critical">Critical</span></div>
+      <div class="case-icon">⚡</div>
+      <div class="case-title">PowerGrid ICS Intrusion</div>
+      <div class="case-org">// Critical Infrastructure — 2024</div>
+      <p class="case-desc">Nation-state APT gained OT network access via spear phishing. Positioned to disrupt power to 2.4M customers.</p>
+      <div class="case-meta">
+        <div class="meta-item">Vector: <span>Spear Phishing</span></div>
+        <div class="meta-item">Dwell: <span>180 days</span></div>
+        <div class="meta-item">Impact: <span>Potential blackout</span></div>
+      </div>
+      <div class="case-expand">
+        <h4>Attack Chain</h4>
+        <ul class="impact-list">
+          <li>Targeted spear phishing of 3 SCADA engineers with weaponized PDF</li>
+          <li>Macro executed reverse shell via LOLBin (certutil.exe)</li>
+          <li>Pivot from IT network to OT via unprotected historian server</li>
+          <li>Planted logic bombs in PLCs controlling substation breakers</li>
+          <li>Discovered by CISA during routine OT network audit</li>
+        </ul>
+        <h4 style="margin-top:1rem;">Prevention Gaps</h4>
+        <ul class="impact-list">
+          <li>IT/OT air gap violated by unmonitored historian bridge</li>
+          <li>OT assets had no asset inventory or baseline monitoring</li>
+          <li>No email filtering for document macros in OT-adjacent roles</li>
+        </ul>
+      
+    <div class="case-card medium reveal" onclick="toggleCase(this)">
+      <div style="position:absolute;top:1rem;right:1rem;"><span class="severity sev-medium">Medium</span></div>
+      <div class="case-icon">🛒</div>
+      <div class="case-title">RetailX Magecart Skimming</div>
+      <div class="case-org">// E-commerce Platform — 2023</div>
+      <p class="case-desc">JavaScript skimmer injected into checkout page via compromised third-party analytics library. 1.2M card numbers stolen silently.</p>
+      <div class="case-meta">
+        <div class="meta-item">Vector: <span>JS Injection</span></div>
+        <div class="meta-item">Dwell: <span>47 days</span></div>
+        <div class="meta-item">Cards: <span>1.2M stolen</span></div>
+      </div>
+      <div class="case-expand">
+        <h4>Attack Chain</h4>
+        <ul class="impact-list">
+          <li>Compromised CDN serving third-party tag manager script</li>
+          <li>2-line skimmer appended to minified JS — passed code review</li>
+          <li>Captured all keystrokes on /checkout pages in real-time</li>
+          <li>Exfiltrated data to lookalike domain using base64 image GET requests</li>
+          <li>Detected by PCI QSA during annual compliance scan</li>
+        </ul>
+        <h4 style="margin-top:1rem;">Prevention Gaps</h4>
+        <ul class="impact-list">
+          <li>No Content Security Policy (CSP) enforced on checkout pages</li>
+          <li>Subresource Integrity (SRI) hashes not implemented</li>
+          <li>No real-time script change alerting on production assets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-card reveal" onclick="toggleCase(this)">
+      <div style="position:absolute;top:1rem;right:1rem;"><span class="severity sev-high">High</span></div>
+      <div class="case-icon">☁️</div>
+      <div class="case-title">CloudStar S3 Data Exposure</div>
+      <div class="case-org">// SaaS Provider — 2024</div>
+      <p class="case-desc">Misconfigured IAM role allowed public S3 bucket listing. 11TB of customer documents exposed for 73 days.</p>
+      <div class="case-meta">
+        <div class="meta-item">Vector: <span>Misconfiguration</span></div>
+        <div class="meta-item">Exposed: <span>73 days</span></div>
+        <div class="meta-item">Records: <span>4.8M files</span></div>
+      </div>
+      <div class="case-expand">
+        <h4>Attack Chain</h4>
+        <ul class="impact-list">
+          <li>Developer pushed IAM policy with wildcard (*) S3 permissions</li>
+          <li>Terraform plan approved without security review in CI/CD</li>
+          <li>Bucket discovered by threat researcher via public S3 scanner</li>
+          <li>Data indexed by multiple automated exposure tracking services</li>
+          <li>GDPR fine of €8.4M + class action lawsuit pending</li>
+        </ul>
+        <h4 style="margin-top:1rem;">Prevention Gaps</h4>
+        <ul class="impact-list">
+          <li>No IaC security scanning (Checkov, tfsec) in pipeline</li>
+          <li>Cloud Security Posture Management (CSPM) not deployed</li>
+          <li>No S3 public access block at organization level</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-card medium reveal" onclick="toggleCase(this)">
+      <div style="position:absolute;top:1rem;right:1rem;"><span class="severity sev-medium">Medium</span></div>
+      <div class="case-icon">👤</div>
+      <div class="case-title">FinFirm Insider Threat</div>
+      <div class="case-org">// Investment Management — 2023</div>
+      <p class="case-desc">Disgruntled analyst exfiltrated proprietary trading algorithms before resignation. Data sold to competitor for $2.1M.</p>
+      <div class="case-meta">
+        <div class="meta-item">Vector: <span>Insider</span></div>
+        <div class="meta-item">Duration: <span>3 months</span></div>
+        <div class="meta-item">Loss: <span>$2.1M IP theft</span></div>
+      </div>
+      <div class="case-expand">
+        <h4>Attack Chain</h4>
+        <ul class="impact-list">
+          <li>Employee used legitimate access to copy files to personal cloud storage</li>
+          <li>Gradual exfiltration below DLP threshold limits over 3 months</li>
+          <li>Used personal device on guest WiFi to avoid endpoint monitoring</li>
+          <li>Discovered via post-departure forensics on corporate devices</li>
+        </ul>
+        <h4 style="margin-top:1rem;">Prevention Gaps</h4>
+        <ul class="impact-list">
+          <li>DLP policies lacked behavioral analytics for slow exfiltration</li>
+          <li>No UEBA (User and Entity Behavior Analytics) deployed</li>
+          <li>Offboarding process did not revoke access within 24 hours</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PREVENTION MODEL -->
+<section id="prevention">
+  <p class="section-label reveal">// defense framework</p>
+  <h2 class="reveal">5-Layer Prevention <br>Model</h2>
+  <p class="section-sub reveal">A defense-in-depth architecture that addresses human, process, and technology gaps.</p>
+
+  <div class="model-section reveal">
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.5rem;">
+      <div style="font-family:'DM Mono',monospace;font-size:.75rem;color:var(--accent);">NIST CSF 2.0 ALIGNED</div>
+    </div>
+    <p style="color:var(--text2);font-size:.9rem;">Based on NIST Cybersecurity Framework 2.0 and MITRE ATT&CK. Each layer is independently effective — together they create exponential attacker friction.</p>
+
+    <div class="model-grid">
+      <div class="model-card">
+        <div class="model-num">Layer 01</div>
+        <div class="model-icon">🔍</div>
+        <div class="model-title">Identify & Inventory</div>
+        <p class="model-desc">Know every asset, user, and data flow. You cannot protect what you don't know exists.</p>
+        <div class="model-tags">
+          <span class="tag-item">CMDB</span>
+          <span class="tag-item">SBOM</span>
+          <span class="tag-item">Data Classification</span>
+          <span class="tag-item">Risk Register</span>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-num">Layer 02</div>
+        <div class="model-icon">🛡️</div>
+        <div class="model-title">Harden & Protect</div>
+        <p class="model-desc">Reduce attack surface through configuration management, patching, and access control enforcement.</p>
+        <div class="model-tags">
+          <span class="tag-item">MFA</span>
+          <span class="tag-item">Zero Trust</span>
+          <span class="tag-item">Patch SLA</span>
+          <span class="tag-item">CIS Benchmarks</span>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-num">Layer 03</div>
+        <div class="model-icon">👁️</div>
+        <div class="model-title">Detect & Monitor</div>
+        <p class="model-desc">Continuous visibility across endpoints, network, identity, and cloud. Mean time to detect under 24h.</p>
+        <div class="model-tags">
+          <span class="tag-item">SIEM</span>
+          <span class="tag-item">EDR/XDR</span>
+          <span class="tag-item">UEBA</span>
+          <span class="tag-item">Threat Intel</span>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-num">Layer 04</div>
+        <div class="model-icon">⚡</div>
+        <div class="model-title">Respond & Contain</div>
+        <p class="model-desc">Documented playbooks for every threat category. Automated containment triggers. 4-hour MTTC target.</p>
+        <div class="model-tags">
+          <span class="tag-item">IRP</span>
+          <span class="tag-item">SOAR</span>
+          <span class="tag-item">Tabletop Drills</span>
+          <span class="tag-item">IR Retainer</span>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-num">Layer 05</div>
+        <div class="model-icon">🔄</div>
+        <div class="model-title">Recover & Improve</div>
+        <p class="model-desc">Resilient backups, tested recovery procedures, and blameless post-mortems that drive measurable improvement.</p>
+        <div class="model-tags">
+          <span class="tag-item">3-2-1 Backup</span>
+          <span class="tag-item">BCP/DR</span>
+          <span class="tag-item">Post-Mortem</span>
+          <span class="tag-item">RTO/RPO SLA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THREAT MATRIX -->
+<section id="matrix">
+  <p class="section-label reveal">// attack vs defense</p>
+  <h2 class="reveal">Threat & Control <br>Matrix</h2>
+  <p class="section-sub reveal">Mapping attack techniques to specific mitigating controls based on MITRE ATT&CK.</p>
+
+  <div class="matrix-wrap reveal">
+    <table>
+      <thead>
+        <tr>
+          <th>Attack Technique</th>
+          <th>MITRE ID</th>
+          <th>Risk</th>
+          <th>Primary Control</th>
+          <th>Secondary Control</th>
+          <th>Detection</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-attack">Phishing</span></td>
+          <td style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);">T1566</td>
+          <td class="risk-high">Critical</td>
+          <td>Email security gateway + DMARC</td>
+          <td>Security awareness training</td>
+          <td>SIEM email anomaly rules</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-attack">Credential Stuffing</span></td>
+          <td style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);">T1110.004</td>
+          <td class="risk-high">High</td>
+          <td>MFA enforcement on all accounts</td>
+          <td>Rate limiting + CAPTCHA</td>
+          <td>Auth failure velocity alerts</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-attack">Ransomware</span></td>
+          <td style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);">T1486</td>
+          <td class="risk-high">Critical</td>
+          <td>Immutable offline backups</td>
+          <td>Network segmentation</td>
+          <td>EDR ransomware heuristics</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-attack">Supply Chain</span></td>
+          <td style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);">T1195</td>
+          <td class="risk-high">Critical</td>
+          <td>SBOM + code signing verification</td>
+          <td>Vendor security assessments</td>
+          <td>Behavioral analysis of updates</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-attack">Privilege Escalation</span></td>
+          <td style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);">T1068</td>
+          <td class="risk-med">High</td>
+          <td>Principle of least privilege</td>
+          <td>PAM solution + session recording</td>
+          <td>UEBA privilege anomaly alerts</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-attack">Lateral Movement</span></td>
+          <td style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);">T1021</td>
+          <td class="risk-med">High</td>
+          <td>Zero Trust network segmentation</td>
+          <td>Disable unnecessary protocols</td>
+          <td>East-west traffic analytics</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-attack">Data Exfiltration</span></td>
+          <td style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);">T1041</td>
+          <td class="risk-med">High</td>
+          <td>DLP with behavioral analytics</td>
+          <td>Egress traffic filtering</td>
+          <td>Unusual volume/destination alerts</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-attack">Web Application Attack</span></td>
+          <td style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);">T1190</td>
+          <td class="risk-med">Medium</td>
+          <td>WAF + input validation</td>
+          <td>DAST in CI/CD pipeline</td>
+          <td>WAF alert correlation in SIEM</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-attack">Insider Threat</span></td>
+          <td style="font-family:'DM Mono',monospace;font-size:.8rem;color:var(--text2);">T1078</td>
+          <td class="risk-low">Medium</td>
+          <td>UEBA + data access governance</td>
+          <td>Background checks + IAM reviews</td>
+          <td>Anomalous access pattern alerts</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+  <p class="section-label reveal">// knowledge check</p>
+  <h2 class="reveal">Test Your <br>Security Knowledge</h2>
+  <p class="section-sub reveal">6 scenario-based questions drawn from real incident patterns.</p>
+
+  <div class="quiz-section reveal">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width:16.67%"></div>
+    </div>
+    <div class="quiz-q" id="quizQ"></div>
+    <div class="quiz-options" id="quizOpts"></div>
+    <div class="quiz-feedback" id="quizFeedback"></div>
+    <div class="quiz-nav">
+      <span class="quiz-progress" id="quizProg"></span>
+      <button class="btn-secondary" id="nextBtn" onclick="nextQ()" style="display:none">Next →</button>
+    </div>
+    <div id="quizResult" style="display:none;text-align:center;padding:1rem 0;">
+      <div style="font-family:'Syne',sans-serif;font-size:2rem;font-weight:700;margin-bottom:.5rem;" id="scoreDisplay"></div>
+      <p style="color:var(--text2);font-size:.95rem;margin-bottom:1.5rem;" id="scoreMsg"></p>
+      <button class="btn-primary" onclick="resetQuiz()">Retake Quiz</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">⬡ CyberShield</div>
+  <p>Cybersecurity Case Studies & Prevention Model — Educational Reference</p>
+  <p style="margin-top:.5rem;font-size:.8rem;">Based on NIST CSF 2.0 · MITRE ATT&CK · CIS Controls v8</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
